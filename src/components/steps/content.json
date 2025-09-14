@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_steps_contents",
+  "info": {
+    "displayName": "Content"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Imp_note": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

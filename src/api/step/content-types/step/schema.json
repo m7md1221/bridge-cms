@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps",
+  "info": {
+    "singularName": "step",
+    "pluralName": "steps",
+    "displayName": "Step"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "step": {
+      "type": "biginteger"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "phaseName": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "component",
+      "component": "steps.content",
+      "repeatable": false
+    },
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "palestine to jordan",
+        "jordan to palestine"
+      ]
+    }
+  }
+}
