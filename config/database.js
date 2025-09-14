@@ -9,7 +9,9 @@ module.exports = ({ env }) => ({
       database: env('DATABASE_NAME', 'bridge_steps'),
       user: env('DATABASE_USERNAME', 'bridge_steps_user'),
       password: env('DATABASE_PASSWORD', 'Xt8p3dsP91xzqQ339fMEVpcvlDExpYPH'),
-     ssl: false,
-    },
+ssl: {
+  require: true,
+  rejectUnauthorized: false,
+},    },
   },
 });
