@@ -1,9 +1,11 @@
+const crypto = require('crypto');
+
 module.exports = ({ env }) => ({
   auth: {
-    secret: 'VAwSIe67uWtjfYeghKqKwg==', // AUTH_SECRET
+    secret: env('AUTH_SECRET') || crypto.randomBytes(16).toString('base64'),
   },
   apiToken: {
-    salt: 'AQobwizR1Hw5uZS9A9oDww==', // ADMIN_JWT_SALT مباشرة
+    salt: env('ADMIN_JWT_SALT') || crypto.randomBytes(16).toString('base64'),
   },
-  watchIgnoreFiles: ['**/local.js'], 
+  watchIgnoreFiles: ['**/local.js'],
 });
