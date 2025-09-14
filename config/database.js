@@ -11,7 +11,8 @@ module.exports = ({ env }) => ({
       password: env('DATABASE_PASSWORD', 'Xt8p3dsP91xzqQ339fMEVpcvlDExpYPH'),
 ssl: {
   require: true,
-  rejectUnauthorized: false,
-},    },
+  rejectUnauthorized: false, // لتجاوز self-signed
+},
+    },
   },
 });
