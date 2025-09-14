@@ -1,3 +1,4 @@
+
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
@@ -8,6 +9,7 @@ module.exports = ({ env }) => ({
       user: env('DATABASE_USERNAME', 'bridge_steps_user'),
       password: env('DATABASE_PASSWORD', 'Xt8p3dsP91xzqQ339fMEVpcvlDExpYPH'),
       ssl: {
+        require: true,
         rejectUnauthorized: false,
       },
     },
