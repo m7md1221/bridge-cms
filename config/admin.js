@@ -1,5 +1,7 @@
 module.exports = ({ env }) => ({
-  apiToken: {
-    salt: env('ADMIN_JWT_SALT'),
+  auth: {
+    apiToken: {
+      salt: env('API_TOKEN_SALT'),
+    },
   },
 });
