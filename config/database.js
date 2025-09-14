@@ -1,5 +1,3 @@
-// path: ./config/database.js
-
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
@@ -9,10 +7,9 @@ module.exports = ({ env }) => ({
       database: env('DATABASE_NAME', 'bridge_steps'),
       user: env('DATABASE_USERNAME', 'bridge_steps_user'),
       password: env('DATABASE_PASSWORD', 'Xt8p3dsP91xzqQ339fMEVpcvlDExpYPH'),
-ssl: {
-  require: true,
-  rejectUnauthorized: false, // لتجاوز self-signed
-},
+      ssl: env.bool('DATABASE_SSL', true)
+        ? { rejectUnauthorized: false } 
+        : false,
     },
   },
 });
