@@ -6,8 +6,10 @@ export interface StepsContent extends Struct.ComponentSchema {
     displayName: 'Content';
   };
   attributes: {
-    Imp_note: Schema.Attribute.String;
-    text: Schema.Attribute.Text;
+    Imp_note: Schema.Attribute.Blocks;
+    Imp_note1: Schema.Attribute.String;
+    text: Schema.Attribute.Blocks;
+    text1: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }

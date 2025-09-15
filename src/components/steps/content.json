@@ -9,9 +9,15 @@
       "type": "string"
     },
     "text": {
-      "type": "text"
+      "type": "blocks"
     },
     "Imp_note": {
+      "type": "blocks"
+    },
+    "text1": {
+      "type": "text"
+    },
+    "Imp_note1": {
       "type": "string"
     }
   },
